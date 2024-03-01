@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="login()">Submit</button>
+    </form>
+    <script>
+        function login() {
+            let password = document.getElementById("password").value;
+            let username = document.getElementById("name").value;
+
+            if (username === "Cyrell" && password === "123") {
+                location.href = 'calculator.html';
+            } else if (username === "" && password === "") {
+                alert('Empty fields! Please fill all the fields.');
+            } else if (username === "") {
+                alert('Empty username');
+            } else if (password === "") {
+                alert('Empty password');
+            } else {
+                alert('Wrong Username or Password');
+            }
+        }
+    </script>
+</body>
+</html>
